@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('image');
             $table->string('barcode')->unique()->nullable();
             $table->longText('description')->nullable();
-            $table->unsignedBigInteger('qty')->default(0);
+            $table->integer('qty')->default(0);
+            $table->integer('stock')->default(0);
             $table->decimal('price')->nullable();
             $table->timestamps();
         });

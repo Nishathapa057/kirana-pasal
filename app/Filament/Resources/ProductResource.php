@@ -30,7 +30,7 @@ class ProductResource extends Resource
                     ->image()
                     ->required(),
                 Forms\Components\TextInput::make('barcode')
-                    ->default('SKP-'. random_int(1000, 99999))
+                    ->default('SKP-' . random_int(1000, 99999))
                     ->required(),
                 Forms\Components\Textarea::make('description')
                     ->columnSpanFull(),
@@ -61,6 +61,9 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('barcode')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('qty')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('stock')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('price')

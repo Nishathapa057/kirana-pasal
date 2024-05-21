@@ -113,7 +113,6 @@ class OrderResource extends Resource
                     ->disabled()
                     ->dehydrated()
                     ->numeric()
-                    ->required()
                     ->columnSpan([
                         'md' => 3,
                     ]),

@@ -63,9 +63,6 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('qty')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('stock')
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('price')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
